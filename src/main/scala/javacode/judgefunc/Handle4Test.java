@@ -9,42 +9,51 @@ import java.util.function.Function;
  */
 public class Handle4Test {
 
-
-    public boolean isFirst (ContextData  context){
-        return false;
-    }
-    public boolean isBusinessLine(ContextData  context){
-        return false;
-    }
-    public boolean isDistrict(ContextData  context){
-        return false;
-    }
-
-
-//    public void handle (){
-//        Collection<Function<ContextData, Boolean>> conditions = new ArrayList<>();
-//        conditions.add(haha ->  isValid(haha));
+//    public boolean isFirst(ContextData context) {
+//        return false;
+//    }
 //
+//    public boolean isBusinessLine(ContextData context) {
+//        return false;
+//    }
+//
+//    public boolean isDistrict(ContextData context) {
+//        return false;
+//    }
+
+
+    public void handle() {
+        Collection<Function<ContextData, Boolean>> conditions = new ArrayList<>();
+        conditions.add(haha -> isValid(haha));
+
 //        conditions.add(context -> isFirst(context));
 //        conditions.add(context -> isBusinessLine(context));
 //        conditions.add(context -> isDistrict(context));
-//
-//        public boolean judge(ContextData context, Collection<Function<ContextData, Boolean>> conditions) {
-//            for (Function<ContextData, Boolean> cond : conditions) {
-//                if (!cond.apply(context)) {
-//                    return false;
-//                }
-//            }
-//            return true;
-//        }
+    }
+    public boolean judge(ContextData context, Collection<Function<ContextData, Boolean>> conditions) {
+        for (Function<ContextData, Boolean> cond : conditions) {
+            if (!cond.apply(context)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-}
-
-class isValid implements  Function{
-
-    @Override
-    public Object apply(Object o) {
-
-        return false;
+    private static Boolean isValid(ContextData haha){
+        return haha.getDistrict_();
     }
 }
+
+
+
+
+
+
+//class isValid implements  Function{
+//
+//    @Override
+//    public Object apply(Object o) {
+//
+//        return false;
+//    }
+//}
