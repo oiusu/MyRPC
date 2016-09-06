@@ -58,4 +58,7 @@ public class ContextData {
         this.district_ = district_;
         this.isBusinessLine_ = isBusinessLine_;
     }
+
+    public ContextData() {
+    }
 }
