@@ -3,6 +3,7 @@ package cn.chenc.fsm.platform
 
 import akka.actor.FSM
 import PlatformMachine._
+import cn.chenc.fsm.platform1
 
 import scala.collection.mutable
 
