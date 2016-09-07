@@ -14,8 +14,8 @@ public class JavaPlatform4test {
             JavaPlatformMachine pm = new JavaPlatformMachine();
             pm.data.setValid_(true);
             pm.data.setFirst_(false);
-            pm.data.setBusinessLine_(false);
-            pm.data.setDistrict_(false);
+            pm.data.setBusinessLine_(true);
+            pm.data.setDistrict_(true);
 
             System.out.println("Current State:" + pm.state.name());
             pm.valid();

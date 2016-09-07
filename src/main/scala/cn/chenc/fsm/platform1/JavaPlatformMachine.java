@@ -8,7 +8,7 @@ import javacode.judgefunc.ContextData;
 public class JavaPlatformMachine {
 
     ContextData data = new ContextData();
-    JavaPlatformState state = JavaPlatformState.OPEN;//private改默认，删除getState()。
+    JavaPlatformState state = JavaPlatformState.OPEN;
     //Action
     public void valid(){
         state.valid(this);
